@@ -24,6 +24,5 @@ public class Mammals extends AbstractAnimal
 	{
 		return "live births";
 	}
-
 }
 

@@ -71,9 +71,9 @@ public class Main
 
 		System.out.println("\n\n*** Animals That Breath With Lungs ***");
 		List<AbstractAnimal> filteredList = filterAnimal(myList, a -> (a.breath().equals("lungs")));
-		filteredList.forEach((v) -> System.out.println(v.getName() + " " + v.reproduce() + " " + v.move() + " " + v.breath() + " " + v.getYear()));
+		filteredList.forEach((v) -> System.out.println(v.toStringTwo()));
 
-		System.out.println("\n\n*** Animals That Breath With Lungs & Name in 1958 ***");
+		System.out.println("\n\n*** Animals That Breath With Lungs & Named in 1758 ***");
 		filteredList = filterAnimal(myList, a -> (a.breath().equals("lungs") && (a.getYear() == 1758)));
 		filteredList.forEach((v) -> System.out.println(v.getName() + " " + v.reproduce() + " " + v.move() + " " + v.breath() + " " + v.getYear()));
 
