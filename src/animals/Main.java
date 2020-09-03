@@ -75,20 +75,20 @@ public class Main
 
 		System.out.println("\n\n*** Animals That Breath With Lungs & Named in 1758 ***");
 		filteredList = filterAnimal(myList, a -> (a.breath().equals("lungs") && (a.getYear() == 1758)));
-		filteredList.forEach((v) -> System.out.println(v.getName() + " " + v.reproduce() + " " + v.move() + " " + v.breath() + " " + v.getYear()));
+		filteredList.forEach((v) -> System.out.println(v.toStringTwo()));
 
 		System.out.println("\n\n*** Animals That Lay Eggs & Breath With Lungs ***");
 		filteredList = filterAnimal(myList, a -> (a.reproduce().equals("eggs") && (a.breath().equals("lungs"))));
-		filteredList.forEach((v) -> System.out.println(v.getName() + " " + v.reproduce() + " " + v.move() + " " + v.breath() + " " + v.getYear()));
+		filteredList.forEach((v) -> System.out.println(v.toStringTwo()));
 
 		System.out.println("\n\n*** Sort Alphabetically Animals Named in 1758 ***");
 		filteredList = filterAnimal(myList, a -> a.getYear() == 1758);
 		filteredList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
-		filteredList.forEach((v) -> System.out.println(v.getName() + " " + v.reproduce() + " " + v.move() + " " + v.breath() + " " + v.getYear()));
+		filteredList.forEach((v) -> System.out.println(v.toStringTwo()));
 
 		System.out.println("\n\n*** Sort Mammals Alphabetically ***");
 		filteredList = filterAnimal(myList, a -> (a instanceof Mammals));
 		filteredList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
-		filteredList.forEach((v) -> System.out.println(v.getName() + " " + v.reproduce() + " " + v.move() + " " + v.breath() + " " + v.getYear()));
+		filteredList.forEach((v) -> System.out.println(v.toStringTwo()));
 	}
 }

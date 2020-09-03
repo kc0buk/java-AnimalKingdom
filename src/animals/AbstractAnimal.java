@@ -19,7 +19,7 @@ abstract class AbstractAnimal
 	abstract String move();
 	abstract String breath();
 	abstract String reproduce();
-	abstract String report();
+	
 
 	void consume()
 	{
@@ -47,7 +47,6 @@ abstract class AbstractAnimal
 		return "id=" + id +", name=" + name + ", yearNamed=" + yearNamed;
 	}
 
-	@Override
 	public String toStringTwo()
 	{
 		return getName() + " " + reproduce() + " " + move() + " " + breath() + " " + getYear();
